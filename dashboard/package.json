@@ -38,6 +38,6 @@
     "typescript": "^5"
   },
   "scripts": {
-    "postinstall": "prisma generate"
+    "postinstall": "prisma generate && npm run migrate:provider-ownership"
   }
 }

@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "migrate:provider-ownership": "tsx src/scripts/migrate-provider-ownership.ts"
+    "migrate:provider-ownership": "tsx src/scripts/migrate-provider-ownership.ts",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@prisma/adapter-pg": "^7.0.0",
@@ -36,8 +37,5 @@
     "tailwindcss": "^4",
     "tsx": "^4.21.0",
     "typescript": "^5"
-  },
-  "scripts": {
-    "postinstall": "prisma generate && npm run migrate:provider-ownership"
   }
 }
